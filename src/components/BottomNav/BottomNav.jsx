@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import './BottomNav.css';
 
 /**
- * Pixel-perfect Bottom Navigation using native ultra-thin Material Symbols.
+ * Pixel-perfect Bottom Navigation matching layout conditional states safely.
  */
 export function BottomNav() {
     const navigate = useNavigate();
@@ -11,9 +11,9 @@ export function BottomNav() {
 
     const isDashboard = location.pathname === "/";
     const isActive = (path) => location.pathname === path;
-    // console.log(location.pathname)
+
     return (
-        <nav className="bottom-nav">
+        <nav className={`bottom-nav ${isDashboard ? 'dashboard-mode-bar' : 'inner-mode-bar'}`}>
             <button
                 className={`nav-item ${isActive('/') ? 'active' : ''}`}
                 onClick={() => navigate('/')}
@@ -28,25 +28,22 @@ export function BottomNav() {
                 <span className="material-symbols-outlined">receipt_long</span>
             </button>
 
-            <button
-                className="nav-item-center"
-                // {1==1 &&(<p></p>)}
-                onClick={() => navigate('/add')}
-            >
-                ＋
-            </button>
-
-            {/* <div className="icon-container"> */}
-            {/* First + Icon */}
-            {/* <button className={`plus-icon ${isDashboard ? "dashboard-style" : "plain-style"}`}>
-                    <span className="material-symbols-outlined">add</span>
-                </button> */}
-
-            {/* Second + Icon */}
-            {/* <button className={`plus-icon ${isDashboard ? "dashboard-style" : "plain-style"}`}>
-                    <span className="material-symbols-outlined">add</span>
-                </button> */}
-            {/* </div> */}
+            {/* CONDITIONAL CENTER ACTION BUTTON BLOCK */}
+            {isDashboard ? (
+                <button
+                    className="nav-item-center-dashboard"
+                    onClick={() => navigate('/add')}
+                >
+                    ＋
+                </button>
+            ) : (
+                <button
+                    className="nav-item-center-inner-pages"
+                    onClick={() => navigate('/add')}
+                >
+                    <span className="material-symbols-outlined inner-circle-plus-vector">add_circle</span>
+                </button>
+            )}
 
             <button
                 className={`nav-item ${isActive('/analytics') ? 'active' : ''}`}
@@ -54,13 +51,13 @@ export function BottomNav() {
             >
                 <span className="material-symbols-outlined">analytics</span>
             </button>
-            {
-                location.pathname == "/" && (
-                    <button className="nav-item">
-                        <span className="material-symbols-outlined">person</span>
-                    </button>
-                )
-            }
+
+            {/* Renders Profile ONLY when current node corresponds strictly onto baseline dashboard route */}
+            {isDashboard && (
+                <button className="nav-item">
+                    <span className="material-symbols-outlined">person</span>
+                </button>
+            )}
         </nav>
     );
 }

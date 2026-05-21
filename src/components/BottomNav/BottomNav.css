@@ -1,4 +1,4 @@
-/* Persistent bottom navigator frame rules */
+/* Base Navigator Frame Wrapper Shell */
 .bottom-nav {
   position: absolute;
   bottom: 0;
@@ -7,11 +7,24 @@
   height: 68px;
   background-color: var(--surface-color);
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding: 0 16px;
   border-top: 1px solid #ececec;
   z-index: 100;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+/* --- THE PROFILE MATRIX DISTRIBUTIONS --- */
+/* Dashboard context bar configuration uses space-around distribution logic rules */
+.bottom-nav.dashboard-mode-bar {
+  justify-content: space-around;
+  padding: 0 16px;
+}
+
+/* Inner pages loop drops element profiles down to clear 4 uniform rows layouts grid blocks */
+.bottom-nav.inner-mode-bar {
+  justify-content: space-between;
+  padding: 0 32px; /* Slight horizontal compression locks it nicely into snapshot guides */
 }
 
 .nav-item {
@@ -23,21 +36,25 @@
   justify-content: center;
   height: 100%;
   width: 50px;
+  outline: none !important;
 }
 
-/* --- THE ACTIVE SELECTION BLACKING SYSTEM FIXED --- */
+/* Thin Vector Line Control Node Overrides */
 .nav-item .material-symbols-outlined {
-  color: #999999 !important; /* Inactive icons default clear gray lines layout */
+  color: #999999 !important;
   font-weight: 200 !important;
+  font-size: 24px !important;
   transition: color 0.15s ease;
 }
 
 .nav-item.active .material-symbols-outlined {
-  color: #111111 !important; /* Active selected icons force pure flat dark solid black */
-  font-weight: 400 !important; /* Slightly thicker vector profile depth match */
+  color: #111111 !important;
+  font-weight: 400 !important;
 }
 
-.nav-item-center {
+/* --- THE CORE ELEMENT BUTTON STYLES --- */
+/* STYLE 1: Dashboard floating box element layout block */
+.nav-item-center-dashboard {
   background-color: var(--color-accent);
   color: var(--surface-color);
   border: none;
@@ -50,5 +67,35 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transform: translateY(-10px);
+  transform: translateY(-10px); /* Keeps it raised on Main screen map */
+  outline: none !important;
+}
+
+/* STYLE 2: The exact thin circle plus design specification asset mapping rules */
+.nav-item-center-inner-pages {
+  background: none !important;
+  border: none !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50px;
+  transform: translateY(
+    0
+  ) !important; /* Clears floating lift to fit inside flush row boundaries */
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Material Symbols native circle configuration profile metrics wrapper rules */
+.inner-circle-plus-vector {
+  color: #b5b5b5 !important; /* Replicates the exact muted grey contrast from 4th picture guide */
+  font-weight: 100 !important; /* Ultra thin vector specification stroke */
+  font-size: 28px !important; /* Elegant expanded dimension scale footprint */
+  transition: color 0.15s ease;
+}
+
+.nav-item-center-inner-pages:hover .inner-circle-plus-vector {
+  color: #111111 !important; /* Interaction highlights vector perfectly */
 }
