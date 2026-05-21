@@ -1,0 +1,40 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  /* background-color: var(--surface-color); */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-btn,
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-title {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  color: var(--text-primary);
+}
+
+.profile-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 30%;
+  object-fit: cover;
+  background-color: #e5e5e5;
+}

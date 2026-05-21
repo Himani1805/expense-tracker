@@ -1,0 +1,54 @@
+/* Persistent bottom navigator frame rules */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 68px;
+  background-color: var(--surface-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 16px;
+  border-top: 1px solid #ececec;
+  z-index: 100;
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50px;
+}
+
+/* --- THE ACTIVE SELECTION BLACKING SYSTEM FIXED --- */
+.nav-item .material-symbols-outlined {
+  color: #999999 !important; /* Inactive icons default clear gray lines layout */
+  font-weight: 200 !important;
+  transition: color 0.15s ease;
+}
+
+.nav-item.active .material-symbols-outlined {
+  color: #111111 !important; /* Active selected icons force pure flat dark solid black */
+  font-weight: 400 !important; /* Slightly thicker vector profile depth match */
+}
+
+.nav-item-center {
+  background-color: var(--color-accent);
+  color: var(--surface-color);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+}

@@ -1,0 +1,245 @@
+.analytics-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f9fafb !important;
+}
+
+.analytics-scroll-area {
+  padding: 0 24px 84px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow-y: auto;
+}
+
+.period-navigation-ribbon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.period-arrow-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #999999;
+  cursor: pointer;
+}
+
+.period-text-wrap {
+  text-align: center;
+}
+.period-caption {
+  font-size: 9px;
+  font-weight: 600;
+  color: #999999;
+  letter-spacing: 0.8px;
+}
+.period-date-header {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111111;
+  margin-top: 2px;
+}
+
+/* --- ASSET COPY REPLICATION LEFT BORDER LINE ACCENT --- */
+.total-expenditure-card {
+  background-color: #ffffff;
+  padding: 16px 20px;
+  text-align: left; /* Flipped layout to match blueprint */
+  border-left: 3px solid #111111; /* Inserted the absolute black edge strip */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+}
+
+.expenditure-label {
+  font-size: 9px;
+  font-weight: 600;
+  color: #999999;
+  letter-spacing: 0.6px;
+}
+.expenditure-amount {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 4px 0;
+  color: #111111;
+}
+.expenditure-mom-sub {
+  font-size: 10px;
+  color: #a3a3a3;
+}
+
+.chart-visualization-block,
+.bar-trend-visualization-block {
+  background-color: #ffffff;
+  padding: 18px;
+}
+
+.block-title-caption {
+  font-size: 9px;
+  font-weight: 600;
+  color: #999999;
+  letter-spacing: 0.5px;
+}
+.donut-chart-relative-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.donut-center-absolute-label {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center-pct-text {
+  font-size: 24px;
+  font-weight: 500;
+  color: #111111;
+}
+.center-sub-caption {
+  font-size: 9px;
+  font-weight: 600;
+  color: #999999;
+  margin-top: 1px;
+}
+
+.analytics-breakdown-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Fixed: Individual clean card rows over flat surface sheets */
+.analytics-breakdown-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 14px 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01);
+}
+
+.row-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+.breakdown-name-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111111;
+}
+.row-values-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.breakdown-currency-val {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111111;
+}
+.breakdown-percentage-lbl {
+  font-size: 11px;
+  color: #999999;
+  width: 28px;
+  text-align: right;
+}
+
+/* --- FIXED VIEW DETAILED FLAT SOLID SQUARE BUTTON --- */
+.view-detailed-report-btn {
+  width: 100%;
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  padding: 16px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+
+.bar-chart-container-adjust {
+  width: 100%;
+  margin-top: 12px;
+}
+/* --- EXTENDED LIVE ANALYTICS REPORT DRAWER STYLES --- */
+.view-detailed-report-btn.active-toggled-report {
+  background-color: #3f4f43 !important;
+  color: #ffffff !important;
+}
+
+.extended-intelligence-overlay-panel {
+  background-color: #ffffff;
+  padding: 18px;
+  border-left: 3px solid #3f4f43;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+}
+
+.micro-overlay-title {
+  font-size: 10px;
+  font-weight: 600;
+  color: #999999;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.metric-meta-details-row-align {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.metric-meta-details-row-align strong {
+  color: #111111;
+  font-weight: 600;
+}
+
+.clean-analytics-fallback-msg {
+  font-size: 12px;
+  color: #8c8c8c;
+  text-align: center;
+  line-height: 1.5;
+  padding: 20px 10px;
+}
+
+.fallback-empty-height {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.period-arrow-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+/* Entry point micro keyframes sequence animations */
+.animate-slide-fade {
+  animation: slideInFade 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideInFade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

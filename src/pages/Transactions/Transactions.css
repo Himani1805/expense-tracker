@@ -1,0 +1,90 @@
+.transactions-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.search-bar-frame {
+  margin: 0 24px 14px 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.structural-search-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 18px !important;
+  color: var(--text-hint) !important;
+}
+
+.search-input-element {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 14px;
+  font-size: 13px;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.chips-scroller-runway {
+  /* border: 2px solid red; */
+  width: 100%;
+  min-height: 54px;
+  overflow-x: auto;
+  padding: 0 24px 19px 24px;
+  /* margin-bottom: 30px; */
+}
+
+.chips-internal-container {
+  display: flex;
+  gap: 8px;
+  width: max-content;
+  /* margin-bottom: 30px; */
+}
+
+.filter-capsule-btn {
+  background-color: #f3f4f6;
+  color: var(--text-secondary);
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-capsule-btn.capsule-active {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.transactions-feed-scroll-viewport {
+  padding: 0 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chronological-group-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.timeline-group-header-title {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-hint);
+  padding-left: 2px;
+}
+
+.transactions-composite-list-card {
+  background-color: var(--surface-color);
+  border-radius: 18px;
+  padding: 4px 16px;
+  box-shadow: var(--shadow-sm);
+}

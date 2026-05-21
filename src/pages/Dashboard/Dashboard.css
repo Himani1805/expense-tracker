@@ -1,0 +1,106 @@
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f9fafb !important;
+}
+
+.dashboard-scroll-area {
+  padding: 0 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  overflow-y: auto;
+}
+
+.balance-section {
+  text-align: center;
+  padding: 12px 0 4px 0;
+}
+
+.balance-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-hint);
+  color: #111111;
+  letter-spacing: 0.8px;
+}
+
+.balance-amount {
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  margin: 6px 0 4px 0;
+  color: var(--text-primary);
+}
+
+.balance-trend {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.summary-row {
+  display: flex;
+  gap: 14px;
+}
+
+.spend-analytics-banner {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 22px;
+  border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.spend-analytics-banner h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.spend-analytics-banner p {
+  font-size: 12px;
+  color: #a3a3a3;
+  line-height: 1.4;
+}
+
+.recent-activity-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.view-all-btn {
+  background: none;
+  border: none;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.activity-container-card {
+  background-color: var(
+    --surface-color
+  ); 
+  border-radius: var(--radius-xs);
+  padding: 6px 18px;
+  box-shadow: var(--shadow-sm);
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

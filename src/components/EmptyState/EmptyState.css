@@ -1,0 +1,22 @@
+.empty-state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.empty-state-icon {
+  font-size: 40px !important;
+  color: var(--text-hint);
+  font-weight: 100 !important;
+  margin-bottom: 12px;
+}
+
+.empty-state-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}

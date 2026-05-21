@@ -1,0 +1,81 @@
+:root {
+  --bg-color: #f9fafb;
+  --surface-color: #ffffff;
+  --text-primary: #111111;
+  --text-secondary: #666666;
+  --text-hint: #999999;
+
+  /* Brand/Status Colors */
+  --color-income: #10b981;
+  --color-expense: #ef4444;
+  --color-accent: #111111;
+
+  /* Layout & Spacing Defaults */
+  --app-max-width: 375px;
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.015);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.03);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+}
+
+body {
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: var(--app-max-width);
+  height: 100vh;
+  max-height: 812px;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+}
+
+h1.balance-amount {
+  font-family: "Times New Roman", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: 200 !important;
+  font-size: 22px;
+  display: inline-block;
+  vertical-align: middle;
+}
