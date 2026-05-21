@@ -48,8 +48,8 @@
 .total-expenditure-card {
   background-color: #ffffff;
   padding: 16px 20px;
-  text-align: left; /* Flipped layout to match blueprint */
-  border-left: 3px solid #111111; /* Inserted the absolute black edge strip */
+  text-align: left; 
+  border-left: 3px solid #111111;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
 }
 

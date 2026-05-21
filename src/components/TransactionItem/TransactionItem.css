@@ -77,18 +77,17 @@
 }
 
 .income-green-ink {
-  color: #10b981 !important; /* Retained exact production emerald crisp color green token matching framework specifications */
+  color: #10b981 !important;
 }
 
 /* --- THE DATE LABELS LAYOUT MATCH --- */
 .item-uppercase-date-stamp-label {
   font-size: 9px;
   font-weight: 500;
-  color: #b5b5b5; /* Soft typography gray tint matching design sheets perfectly */
+  color: #b5b5b5;
   letter-spacing: 0.2px;
 }
 
-/* Interaction layers hiding action controllers clean out clutter */
 .item-action-hover-triggers-panel {
   display: flex;
   gap: 2px;
