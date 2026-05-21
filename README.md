@@ -1,24 +1,27 @@
 # Expense Tracker App (Mobile-First)
 
-[cite_start]A production-quality, pixel-accurate personal finance mobile application built with React, Vite, and modern functional hooks[cite: 4, 7, 12]. [cite_start]This application replicates the provided design screens without relying on any external component or UI libraries[cite: 13, 14].
+A production-quality, pixel-accurate personal finance mobile application built with React, Vite, and modern functional hooks.This application replicates the provided design screens without relying on any external component or UI libraries.
 
 ## 🚀 Links
-- **Live Demo:** []
-- **GitHub Repository:** []
+
+- **Live Demo:** [https://expense-tracker-zeta-flame-83.vercel.app/]
+- **GitHub Repository:** [https://github.com/Himani1805/expense-tracker/blob/master/README.md]
 
 ---
 
 ## 🛠️ Tech Stack
-- [cite_start]**Frontend:** React + Vite [cite: 7]
-- [cite_start]**Styling:** Plain CSS only (No Tailwind, MUI, or Bootstrap) [cite: 13]
+
+- **Frontend:** React + Vite
+- **Styling:** Plain CSS only (No Tailwind, MUI, or Bootstrap)
 - **State Management:** Context API + `useReducer` (No Redux)
-- [cite_start]**Data Persistence:** `localStorage` [cite: 9]
+- **Data Persistence:** `localStorage`
 - **Charts:** Recharts (for Analytics Screen)
-- [cite_start]**Base Layout:** Strict 375px Mobile Width [cite: 8]
+- **Base Layout:** Strict 375px Mobile Width
 
 ---
 
 ## 📂 Folder Structure
+
 ```text
 src/
 ├── components/     # Reusable UI Elements (Header, SummaryCard, BottomNav)
@@ -30,7 +33,7 @@ src/
 └── utils/          # Pure Helper Functions (Currency Format, Date Grouping)
 
 
-## 🧠 Key Decisions ExplainedContext API + useReducer: 
+## 🧠 Key Decisions ExplainedContext API + useReducer:
 Used for clean and predictable global state management without adding the unnecessary bundle weight of Redux.Plain CSS Variables: Standard CSS custom properties used to maintain pixel-perfect design accuracy, strict padding ratios, and monochrome vector icon fidelity across all screens.  No Overengineering: Component files like TransactionItem or CategoryChip were merged directly into their respective pages to prevent dirty conditional props and keep the code clean and DRY.Data Optimization: Implemented useMemo hooks for real-time text searching, category filtering, and date-wise grouping to prevent re-render lags on mobile viewports.
 
 🚀 How to Run Locally
@@ -46,3 +49,4 @@ npm install
 
 # Start the local development server
 npm run dev
+```
