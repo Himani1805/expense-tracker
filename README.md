@@ -70,8 +70,8 @@ npm install
 # Start the local development server
 npm run dev
 
-````
-
 The application will start locally at: http://localhost:5173
 
-For the best viewing experience, open DevTools and enable mobile view with a width close to 375px.
+````
+
+
