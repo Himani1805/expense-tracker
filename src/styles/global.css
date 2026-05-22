@@ -66,6 +66,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
   color: var(--text-primary);
   overflow: hidden;
 }
@@ -90,6 +91,7 @@ body {
   width: 100%;
   max-width: var(--app-max-width);
   height: 100vh;
+  height: -webkit-fill-available;
   max-height: 812px;
   background-color: var(--bg-color);
   box-shadow: var(--shadow-md);
@@ -98,6 +100,14 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 3px;
+}
+
+.add-transaction-form-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto !important; 
+  padding-bottom: 90px !important;
 }
 
 h1.balance-amount {
