@@ -4,8 +4,8 @@ A production-quality, pixel-accurate personal finance mobile application built w
 
 ## 🚀 Links
 
-- **Live Demo:** [https://expense-tracker-zeta-flame-83.vercel.app/]
-- **GitHub Repository:** [https://github.com/Himani1805/expense-tracker/blob/master/README.md]
+- **Live Demo:** [https://expense-tracker-zeta-flame-83.vercel.app/](https://expense-tracker-zeta-flame-83.vercel.app/)
+- **GitHub Repository:** [https://github.com/Himani1805/expense-tracker](https://github.com/Himani1805/expense-tracker)
 
 ---
 
@@ -22,9 +22,9 @@ A production-quality, pixel-accurate personal finance mobile application built w
 
 ## 📂 Folder Structure
 
-```text
+````text
 src/
-├── components/     # Reusable UI Elements (Header, SummaryCard, BottomNav)
+├── components/     # Reusable UI Elements (Header, SummaryCard, BottomNav, EmptyState, TransctionItem)
 ├── context/        # Global State Management (TransactionContext)
 ├── data/           # Predefined Categories List
 ├── hooks/          # Custom Hooks (useLocalStorage)
@@ -33,20 +33,45 @@ src/
 └── utils/          # Pure Helper Functions (Currency Format, Date Grouping)
 
 
-## 🧠 Key Decisions ExplainedContext API + useReducer:
-Used for clean and predictable global state management without adding the unnecessary bundle weight of Redux.Plain CSS Variables: Standard CSS custom properties used to maintain pixel-perfect design accuracy, strict padding ratios, and monochrome vector icon fidelity across all screens.  No Overengineering: Component files like TransactionItem or CategoryChip were merged directly into their respective pages to prevent dirty conditional props and keep the code clean and DRY.Data Optimization: Implemented useMemo hooks for real-time text searching, category filtering, and date-wise grouping to prevent re-render lags on mobile viewports.
+## 🧠 Key Decisions Explained
 
-🚀 How to Run Locally
+### Context API + useReducer
+Instead of adding heavy tools like Redux, I used the native Context API and `useReducer`. This keeps the app bundle size lightweight and centralizes all transaction logic (Add, Delete, Filter) in one clean place.
 
+---
+
+### Plain CSS Variables
+I utilized CSS custom properties (`:root`) to maintain uniform spacing, colors, typography, and border radiuses across all screens. This ensured pixel-perfect design accuracy and made the styling highly maintainable.
+
+---
+
+### No Overengineering
+I avoided over-splitting the UI into too many micro-components. Keeping tightly coupled UI logic close to its parent page reduced prop-drilling complexity and kept the overall codebase readable and clean.
+
+---
+
+### Data Optimization
+I implemented `useMemo` hooks for real-time text searching, category filtering, and grouping transactions by date. This prevents unnecessary recalculations on every render, ensuring a smooth, lag-free performance on mobile devices.
+
+---
+
+## 🚀 How to Run Locally
+
+```bash
 # Clone the repository
-git clone [https://github.com/Himani1805/expense-tracker.git](https://github.com/Himani1805/expense-tracker.git)
+git clone https://github.com/Himani1805/expense-tracker.git
 
 # Enter the project directory
 cd expense-tracker
 
-# Install dependencies
+# Install all dependencies
 npm install
 
 # Start the local development server
 npm run dev
-```
+
+````
+
+The application will start locally at: http://localhost:5173
+
+For the best viewing experience, open DevTools and enable mobile view with a width close to 375px.
