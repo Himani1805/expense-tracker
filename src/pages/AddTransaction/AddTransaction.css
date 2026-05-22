@@ -9,22 +9,15 @@
   right: 0;
   bottom: 0;
   z-index: 150;
-  overflow: hidden;
 }
 
 .add-transaction-form-body {
-  padding: 0 24px 0px 24px;
+  padding: 0 24px 24px 24px;
   display: flex;
   flex-direction: column;
-  height: calc(100% - 60px);
-  /* flex: 1; */
-  /* overflow: auto; */
-  /* background: transparent; */
-  overflow: hidden;
-}
-
-.add-transaction-form-body > *:not(.form-submit-anchor) {
-  /* This automatically targets toggle, inputs, grid, and media card */
+  flex: 1;
+  overflow-y: auto;
+  background: transparent;
 }
 
 /* --- TOGGLE PILLED COMPONENTS --- */
@@ -247,14 +240,12 @@
 /* --- THE NOTEBOOK BRAND OVERLAY --- */
 .decorative-bottom-media-card {
   width: 100%;
-  height: 75px; /* Squeezed slightly from 100px to secure tight mobile screens */
-  min-height: 50px;
+  height: 100px;
   border-radius: 14px;
   overflow: hidden;
-  margin-top: auto; /* Pushes itself nicely */
-  margin-bottom: 12px;
+  margin-top: auto;
+  margin-bottom: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
-  flex-shrink: 1; /* Tells browser: "If phone is small, squeeze the image first, not the button!" */
 }
 
 .notebook-render-graphic-img {
@@ -266,11 +257,7 @@
 
 /* --- FOOTER ACTION BAR BUTTON --- */
 .form-submit-anchor {
-  padding-top: 4px;
-  padding-bottom: 84px; /* CRITICAL: This explicitly pushes the button up so it never hides behind bottom nav */
-  width: 100%;
-  margin-top: auto; /* Sticks button hard at the absolute bottom of viewport */
-  background-color: #f9fafb; /* Matches your background layer seamlessly */
+  padding-top: 2px;
 }
 
 .solid-action-submit-btn {
@@ -284,9 +271,4 @@
   font-weight: 500;
   cursor: pointer;
   outline: none !important;
-}
-
-.massive-amount-field,
-.inline-note-field {
-  font-size: 16px !important; /* Safari stops forcing double-tap scale zooms if font size is minimum 16px */
 }
