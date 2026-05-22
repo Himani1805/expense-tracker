@@ -78,3 +78,4 @@ The application will start locally at:
 http://localhost:5173
 
 
+```
