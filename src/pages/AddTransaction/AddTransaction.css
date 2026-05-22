@@ -211,7 +211,7 @@
 .inline-note-field {
   border: none;
   outline: none !important;
-  font-size: 13px;
+  font-size: 16px;
   color: var(--text-primary);
   background: transparent;
   width: 90%;
