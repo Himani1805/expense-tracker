@@ -70,8 +70,11 @@ npm install
 # Start the local development server
 npm run dev
 
-The application will start locally at: http://localhost:5173
-
 ````
+
+The application will start locally at:
+
+```bash
+http://localhost:5173
 
 
